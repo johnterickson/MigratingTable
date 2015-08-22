@@ -1,0 +1,4 @@
+[submodule "PSharp"]
+	path = PSharp
+	url = https://github.com/jerickmsft/PSharp.git
+	branch = for-migratingtable

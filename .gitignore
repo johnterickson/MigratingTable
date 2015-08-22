@@ -1,0 +1,13 @@
+bin
+obj
+*.suo
+*.metaproj
+*.metaproj.tmp
+
+# I believe this is the way Visual Studio is designed to work, though it might
+# be useful to have a way to distribute some of the information normally stored
+# in these files, e.g., debug configurations.
+*.user
+
+# Automatically downloaded by Visual Studio.
+/packages

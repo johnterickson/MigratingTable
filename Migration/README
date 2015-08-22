@@ -1,0 +1,23 @@
+Various notes about the project / build setup:
+
+The Migration project currently uses its own solution file because the Kiwi
+solution fails to build on my machine and I have neither the knowledge nor the
+inclination to fix it right now.  But Migration.sln is in the same directory as
+Kiwi.sln so it can share the NuGet package cache.
+
+The project file and scripts assume that you have a built PSharp working tree
+alongside the Kiwi working tree.  You can change this if desired.
+
+NOTE: I'm currently assuming the use of my modified version of PSharp from
+https://mattmccutchen-ms.visualstudio.com/DefaultCollection/_git/PSharp, branch
+for-verification.  The main issue is the modification to the scheduler to not be
+confused by intra-machine tasks.  Eventually it should be possible to port the
+verification framework to the official P# async support.
+
+PSharpCompiler by itself does not download NuGet packages or copy external
+assemblies to the output directory (the latter is
+https://github.com/p-org/PSharp/issues/11).  The easiest workaround is to build
+once with Visual Studio and then recompile or test with P#, letting it overwrite
+a subset of the files in the output directory.
+
+~ t-mattmc, 2015-07-21
