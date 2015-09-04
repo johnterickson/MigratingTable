@@ -1,10 +1,10 @@
 # MigratingTable
 
-MigratingTable is a wrapper library for [Azure Table storage](https://msdn.microsoft.com/en-us/library/azure/dd179423.aspx) that allows data to be migrated from one underlying table to another transparently to the application.
+MigratingTable is a wrapper library for [Azure Table storage](https://msdn.microsoft.com/en-us/library/azure/dd179423.aspx) that allows data to be migrated from one underlying table to another transparently to the application.  See [these slides](doc/intern-final-presentation.pptx) for information about the motivation and design.
 
 The initial focus in developing MigratingTable was to put it through systematic concurrency testing using [P#](http://p-org.github.io/PSharp) to gain confidence in its correctness.  Consequently, this open source release includes the P# test harness, but not some of the adapters necessary to actually use MigratingTable on real Azure tables.  MigratingTable also accepts an optional parameter to enable various "bugs" to demonstrate the ability of the test to find them.  As development continues, it may make sense to remove the "bug" code paths to make the code easier to read.
 
-MigratingTable was initially developed by Matt McCutchen (personal email: matt@mattmccutchen.net) while an intern at Microsoft in summer 2015 with manager John Erickson <John.Erickson@microsoft.com>.  We decided to make it available to the public even though we are out of time to prepare adequate public documentation of what it does and how it fits into our bigger picture.  If you're interested, by all means please contact us so we can prioritize improving the documentation or reviewing existing Microsoft internal documentation for public release.
+MigratingTable was initially developed by Matt McCutchen (personal email: matt@mattmccutchen.net) while an intern at Microsoft in summer 2015 with manager John Erickson <John.Erickson@microsoft.com>.  We decided to make it available to the public even though we are out of time to prepare complete public documentation.  If you're interested, by all means please contact us so we can prioritize improving the documentation or reviewing existing Microsoft internal documentation for public release.
 
 ## Building and running the P# test
 
